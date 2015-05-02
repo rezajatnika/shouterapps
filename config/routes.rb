@@ -3,7 +3,10 @@ Rails.application.routes.draw do
   root 'pages#home'
 
   # Static pages
-  get 'pages/about'
-  get 'pages/help'
-  get 'pages/contact'
+  get 'about'   => 'pages#about'
+  get 'help'    => 'pages#help'
+  get 'contact' => 'pages#contact'
+
+  # Register path
+  get 'register' => 'users#new'
 end

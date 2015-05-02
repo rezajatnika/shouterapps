@@ -1,0 +1,19 @@
+{
+  "name": "shouter",
+  "version": "0.0.0",
+  "authors": [
+    "Reza Jatnika <rezajatnika@gmail.com>"
+  ],
+  "description": "shouter application",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.4"
+  }
+}

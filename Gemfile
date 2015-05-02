@@ -9,6 +9,7 @@ gem 'coffee-rails', '4.1.0'
 gem 'jquery-rails', '4.0.3'
 gem 'turbolinks',   '2.5.3'
 gem 'jbuilder',     '2.2.13'
+gem 'bcrypt',       '3.1.10'
 gem 'sdoc',         '0.4.1', group: :doc
 
 # Development gems

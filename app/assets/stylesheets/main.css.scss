@@ -1,0 +1,112 @@
+/* Colors */
+ $purple: #563d7c;
+ $light_purple: #463265;
+ $grey: #e5e5e5;
+ $white: #fff;
+ $dark_grey: #cdbfe3;
+
+/* Fonts */
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+
+/* Main */
+body {
+  padding-top: 70px;
+  font-family: 'Lato';
+}
+
+/* Outline button for use within the docs */
+.btn-outline {
+  color: $white;
+  background-color: $purple;
+  border-color: $grey;
+
+  &:hover, &:focus, &:active {
+    color: $white;
+    background-color: $purple;
+    border-color: $purple;
+  }
+}
+
+/* Inverted outline button (white on dark) */
+.btn-outline-inverse {
+  color: $white;
+  background-color: transparent;
+  border-color: $dark_grey;
+
+  &:hover, &:focus, &:active {
+    color: $purple;
+    text-shadow: none;
+    background-color: $white;
+    border-color: $white;
+  }
+}
+
+/*
+ * Main navigation
+ *
+ * Turn the `.navbar` at the top of the docs purple.
+ */
+
+.bs-docs-nav {
+  text-shadow: 0 -1px 0 rgba(0,0,0,.15);
+  background-color: $purple;
+  border-color: $light_purple;
+  box-shadow: 0 1px 0 rgba(255,255,255,.1);
+
+  .navbar-collapse {
+    border-color: $light_purple;
+  }
+
+  .navbar-brand {
+    color: $white;
+  }
+
+  .navbar-nav > li > a {
+    color: $dark_grey;
+    &:hover {
+      color: $white;
+    }
+    .active {
+      a, a:hover {
+        color: $white;
+        background-color: $light_purple;
+      }
+    }
+  }
+
+  .navbar-toggle {
+    border-color: $purple;
+    &:hover {
+      background-color: $light_purple;
+      border-color: $light_purple;
+    }
+  }
+}
+
+/* Footer */
+footer {
+  margin-top: 45px;
+  padding-top: 10px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+
+  a {
+    color: #555;
+    &:hover {
+      color: #222;
+    }
+  }
+
+  small {
+    float: left;
+  }
+
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 15px;
+    }
+  }
+}
