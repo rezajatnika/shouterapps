@@ -4,7 +4,6 @@ ruby '2.2.1'
 
 # Default gems
 gem 'rails',        '4.2.1'
-gem 'sqlite3',      '1.3.10'
 gem 'bcrypt',       '3.1.10'
 gem 'faker'
 gem 'kaminari'
@@ -30,6 +29,7 @@ group :development, :test do
   gem 'spring',      '1.3.5'
   gem 'figaro'
   gem 'quiet_assets'
+  gem 'sqlite3',     '1.3.10'
 end
 
 # Test gems
