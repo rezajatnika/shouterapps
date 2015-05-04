@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
+
   # Root path
   root 'pages#home'
 
@@ -9,6 +11,11 @@ Rails.application.routes.draw do
 
   # Check user email
   get 'users/check_email', defaults: { format: 'json' }
+
+  # Login/logout
+  get    'login'  => 'sessions#new'
+  post   'login'  => 'sessions#create'
+  delete 'logout' => 'sessions#destroy'
 
   # Register path
   get 'register' => 'users#new'

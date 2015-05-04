@@ -4,6 +4,10 @@ source 'https://rubygems.org'
 gem 'rails',        '4.2.1'
 gem 'sqlite3',      '1.3.10'
 gem 'bcrypt',       '3.1.10'
+gem 'faker'
+gem 'kaminari'
+
+# Assets gems
 gem 'sass-rails',   '5.0.3'
 gem 'uglifier',     '2.7.1'
 gem 'coffee-rails', '4.1.0'

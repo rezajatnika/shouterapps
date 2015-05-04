@@ -1,0 +1,20 @@
+<% provide(:title, 'All Users') %>
+<h1 class="center">All Users</h1>
+<div class="block-grid-md-4 block-grid-sm-2">
+  <% @users.each do |user| %>
+    <div class="block-grid-item border-block">
+      <section class="user-info">
+        <h1>
+          <%= attachment_image_tag(user, :avatar_image, :fill, 50, 50) ||
+          image_tag('default_profile.jpg', size: '50x50', class: 'avatar_image') %>
+          <%= link_to user.name, user %>
+          <span><small>Lorem ipsum dolor sit</small></span>
+          <a href="#" class="btn btn-xs btn-primary">Follow</a>
+        </h1>
+      </section>
+    </div>
+  <% end %>
+</div>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3"><%= paginate @users, window: 2 %></div>
+</div>

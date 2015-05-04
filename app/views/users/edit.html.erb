@@ -1,0 +1,34 @@
+<% provide(:title, 'Edit Profile') %>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <h2>Registration</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, a.</p>
+    <%= form_for @user, html: { 'role' => 'form', 'data-toggle' => 'validator' } do |f| %>
+      <%= render 'shared/error', object: f.object %>
+
+      <div class="form-group">
+        <%= f.text_field :name, class: 'form-control', placeholder: 'Name', required: true %>
+        <div class="help-block with-errors"></div>
+      </div>
+
+      <div class="form-group">
+        <%= f.text_field :email, class: 'form-control', type: 'email', placeholder: 'Email', required: true %>
+        <div class="help-block with-errors"></div>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :remote_avatar_image, class: 'checkbox inline' do %>
+          <%= f.check_box :remove_avatar_image %>
+          <span>Remove avatar image</span>
+        <% end %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :avatar_image, 'Avatar Image' %>
+        <%= f.attachment_field :avatar_image, class: 'form-control' %>
+      </div>
+
+      <%= f.submit class: 'btn btn-primary btn-outline' %>
+    <% end %>
+  </div>
+</div>
