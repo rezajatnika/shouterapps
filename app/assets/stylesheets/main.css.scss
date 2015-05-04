@@ -6,12 +6,12 @@
  $dark_grey: #cdbfe3;
 
 /* Fonts */
-@import url(http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+// @import url(http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
 
 /* Main */
 body {
   padding-top: 70px;
-  font-family: 'Lato';
+  font-family: 'Lato', sans-serif;
 }
 
 .center {
