@@ -27,5 +27,8 @@ module Shouter
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+Rack::Utils::SYMBOL_TO_STATUS_CODE[:application_needs_update] = 422
+Rack::Utils::HTTP_STATUS_CODES[422] = "Application Needs Update"
   end
 end

@@ -1,0 +1,30 @@
+<%= form_for @user, html: { 'role' => 'form', 'data-toggle' => 'validator' } do |f| %>
+  <%= render 'shared/error', object: f.object %>
+
+  <div class="form-group">
+    <%= f.text_field :name, class: 'form-control', placeholder: 'Name', required: true %>
+    <div class="help-block with-errors"></div>
+  </div>
+
+  <div class="form-group">
+    <%= f.text_field :email, class: 'form-control', type: 'email', placeholder: 'Email', required: true, 'data-remote' => '/users/check_email' %>
+    <div class="help-block with-errors"></div>
+  </div>
+
+  <div class="form-group">
+    <%= f.password_field :password, class: 'form-control', placeholder: 'Password', required: true, 'data-minlength' => 5 %>
+    <div class="help-block with-errors"></div>
+  </div>
+
+  <div class="form-group">
+    <%= f.password_field :password_confirmation, class: 'form-control', placeholder: 'Confirmation', required: true, 'data-match' => '#user_password' %>
+    <div class="help-block with-errors"></div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :avatar_image, 'Avatar Image' %>
+    <%= f.attachment_field :avatar_image, class: 'form-control' %>
+  </div>
+
+  <%= f.submit 'Register', class: 'btn btn-primary btn-outline' %>
+<% end %>

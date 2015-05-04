@@ -1,0 +1,13 @@
+<% provide(:title, @user.name) %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user-info">
+      <h1>
+        <%= attachment_image_tag(@user, :avatar_image, :fill, 75, 75) ||
+          image_tag('default_profile.jpg', size: '75x75', class: 'avatar_image') %>
+        <%= @user.name %>
+        <span><small>Lorem ipsum dolor amet</small></span>
+      </h1>
+    </section>
+  </aside>
+</div>

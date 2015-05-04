@@ -18,3 +18,9 @@
 
 # Ignore pids
 /spring/*.pid
+
+# Bower
+/vendor/assets/components
+
+# Ignore application configuration
+/config/application.yml

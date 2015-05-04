@@ -4,6 +4,9 @@ class User < ActiveRecord::Base
   # BCrypt
   has_secure_password
 
+  # Avatar images
+  attachment :avatar_image, type: :image
+
   # Validations
   validates :name,  presence: true, length: { maximum: 50 }
 
